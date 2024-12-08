@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "KLAS Auto Login",
+  "version": "1.0",
+  "description": "계속 확인 버튼 눌러줘야 했던 거 귀찮지 않나요?",
+  "permissions": ["storage", "*://klas.kw.ac.kr/*"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://klas.kw.ac.kr/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
